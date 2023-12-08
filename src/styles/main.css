@@ -64,6 +64,7 @@ h2{
     justify-content: center;
     background-color: #fff;
     cursor: pointer;
+    border: 2px solid #000;
 
     /* Transição das cartas */
 
@@ -90,3 +91,32 @@ h2{
 .boxOpen::after, .boxMatch::after{
     transform: rotateY(180deg);
 }
+
+/* Estilos para o menu de opções */
+
+.icon{
+    display: flex;
+    font-size: 30px;
+    margin: left;
+    cursor: pointer;
+}
+
+.options-menu {
+    font-size: 16px;
+    font-weight: 600;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+  
+.options-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+.options-menu li {
+    cursor: pointer;
+    padding: 5px;
+  }  

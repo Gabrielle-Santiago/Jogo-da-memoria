@@ -9,19 +9,55 @@ let emojis = [
     "💣","💣"
 ];
 
+let animais = [
+    "🐞","🐞",
+    "🐷","🐷",
+    "🐬","🐬",
+    "🦢","🦢",
+    "🦩","🦩",
+    "🐮","🐮",
+    "🐶","🐶",
+    "🐝","🐝"
+];
+
+let frutas = [
+    "🍇","🍇",
+    "🍉","🍉",
+    "🍌","🍌",
+    "🍒","🍒",
+    "🥥","🥥",
+    "🥝","🥝",
+    "🍏","🍏",
+    "🍓","🍓"
+];
+
+let ferramentas = [
+    "🔦","🔦",
+    "🪓","🪓",
+    "🔨","🔨",
+    "⛏️","⛏️",
+    "🪚","🪚",
+    "🔧","🔧",
+    "🪛","🪛",
+    "🔩","🔩",
+];
+let shuffleEmojis;
+
 let openCards = [];
 
-        const shuffleEmojis = emojis.sort(() => Math.random() > 0.5 ? 2 : -1);
+        if (shuffleEmojis = emojis) {
+            emojis.sort(() => Math.random() > 0.5 ? 2 : -1);        
+        } 
 
         const gameContainer = document.querySelector('.game');
 
-        shuffleEmojis.forEach(emoji => {
+        shuffleEmojis.forEach(emojis => {
             const box = document.createElement("div");
             box.className = "item"; 
             // Use className para definir a classe
 
             // Adiciona o emoji ao conteúdo da caixa
-            box.textContent = emoji;
+            box.textContent = emojis;
 
             // Adiciona a caixa ao contêiner do jogo
             gameContainer.appendChild(box);
@@ -57,3 +93,10 @@ let openCards = [];
                 alert("Você venceu!")
             }
         }
+
+    // Função para mostrar/ocultar o menu de opções ao clicar no emoji de configurações
+
+    function Options() {
+    const optionsMenu = document.querySelector('.options-menu');
+    optionsMenu.style.display = optionsMenu.style.display === 'none' ? 'block' : 'none';
+  }
