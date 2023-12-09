@@ -45,11 +45,64 @@ let shuffleEmojis;
 
 let openCards = [];
 
+    const gameContainer = document.querySelector('.game');
+
+    //Chamadas das opções
+    const animals = document.getElementById('animals');
+    const fruit = document.getElementById('fruit');
+    const ferrament = document.getElementById('ferrament');
+    
+    animals.addEventListener("click", function(params) {
+        if(shuffleEmojis = animais){
+            animais.sort(() => Math.random() > 0.5 ? 2 : -1);
+
+            gameContainer.innerHTML ='';
+
+            shuffleEmojis.forEach(animais => {
+                const box = document.createElement("div");
+                box.className = "item";
+                box.textContent = animais;
+                gameContainer.appendChild(box);
+                box.onclick = handleClick;
+            });
+        }
+    });
+
+    fruit.addEventListener("click", function(params) {
+        if(shuffleEmojis = frutas){
+            frutas.sort(() => Math.random() > 0.5 ? 2 : -1);
+
+            gameContainer.innerHTML ='';
+
+            shuffleEmojis.forEach(frutas => {
+                const box = document.createElement("div");
+                box.className = "item";
+                box.textContent = frutas;
+                gameContainer.appendChild(box);
+                box.onclick = handleClick;
+            });
+        }
+    })
+
+    ferrament.addEventListener("click", function(params) {
+        if(shuffleEmojis = ferramentas){
+            ferramentas.sort(() => Math.random() > 0.5 ? 2 : -1);
+
+            gameContainer.innerHTML ='';
+
+            shuffleEmojis.forEach(ferramentas => {
+                const box = document.createElement("div");
+                box.className = "item";
+                box.textContent = ferramentas;
+                gameContainer.appendChild(box);
+                box.onclick = handleClick;
+            });
+        }
+    })
+
         if (shuffleEmojis = emojis) {
             emojis.sort(() => Math.random() > 0.5 ? 2 : -1);        
-        } 
-
-        const gameContainer = document.querySelector('.game');
+        }
 
         shuffleEmojis.forEach(emojis => {
             const box = document.createElement("div");
