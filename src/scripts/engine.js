@@ -74,7 +74,7 @@ let openCards = [];
             handleOptionClick(animais);
         });
         ferrament.addEventListener("click",function(){
-        handleOptionClick(ferramentas);
+            handleOptionClick(ferramentas);
         });
 
         if (shuffleEmojis = emojis) {

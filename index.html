@@ -6,26 +6,28 @@
     <title>Jogo da Memória</title>
     <link rel="stylesheet" href="src/styles/reset.css">
     <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/options.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" class="grid-container">
 
     <span class="icon" aria-label="Configurações" role="img" role="img" onclick="Options()">⚙️
         <section class="options-menu">
             <ul class="list">
-                <li id="animals" onclick="handleOptionClick()">Animais</li>
-                <li id="fruit" onclick="handleOptionClick()">Frutas</li>
-                <li id="ferrament" onclick="handleOptionClick()">Ferramentas</li>
+                <li class="opcao" id="animals" onclick="handleOptionClick()">Animais</li>
+                <li class="opcao" id="fruit" onclick="handleOptionClick() ; changeFruit()">Frutas</li>
+                <li class="opcao" id="ferrament" onclick="handleOptionClick()">Ferramentas</li>
             </ul>
         </section>
     </span>
 
         <h2>JOGO DA MEMÓRIA</h2>
-            <div class="game"></div>
+            <div class="game" class="card"></div>
 
         <button type="button" class="reset" onclick="window.location.reload()">REINICIAR JOGO</button>
     </div>
 
+    <script src="src/scripts/design.js"></script>
     <script src="src/scripts/engine.js"></script>
 </body>
 </html>

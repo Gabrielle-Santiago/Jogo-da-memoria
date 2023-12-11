@@ -1,0 +1,41 @@
+.icon{
+    display: flex;
+    font-size: 30px;
+    margin: left;
+    cursor: pointer;
+}
+
+.options-menu {
+    font-size: 16px;
+    font-weight: 600;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #047575e1;
+    border: none;
+  }
+  
+.options-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+.options-menu li {
+    cursor: pointer;
+    padding: 5px;
+}
+
+.list{
+    display: inline-flex;
+    position: initial;
+    color: #fff;
+    font-size: 18px;
+    background-color: #047575e1;
+}
+
+.opcao:hover{
+  color: #ea75d9;
+  text-shadow: 5px 5px 2px #a70f0f;
+}
