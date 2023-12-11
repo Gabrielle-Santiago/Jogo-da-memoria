@@ -52,53 +52,30 @@ let openCards = [];
     const fruit = document.getElementById('fruit');
     const ferrament = document.getElementById('ferrament');
     
-    animals.addEventListener("click", function(params) {
-        if(shuffleEmojis = animais){
-            animais.sort(() => Math.random() > 0.5 ? 2 : -1);
+        function handleOptionClick(shuffleEmojis) {
+            shuffleEmojis.sort(() => Math.random() > 0.5 ? 2 : -1);
+            gameContainer.innerHTML = '';
 
-            gameContainer.innerHTML ='';
-
-            shuffleEmojis.forEach(animais => {
+            shuffleEmojis.forEach(emoji =>{
                 const box = document.createElement("div");
                 box.className = "item";
-                box.textContent = animais;
+                box.textContent = emoji;
+
                 gameContainer.appendChild(box);
-                box.onclick = handleClick;
-            });
+
+                box.onclick = handleClick
+            })
         }
-    });
 
-    fruit.addEventListener("click", function(params) {
-        if(shuffleEmojis = frutas){
-            frutas.sort(() => Math.random() > 0.5 ? 2 : -1);
-
-            gameContainer.innerHTML ='';
-
-            shuffleEmojis.forEach(frutas => {
-                const box = document.createElement("div");
-                box.className = "item";
-                box.textContent = frutas;
-                gameContainer.appendChild(box);
-                box.onclick = handleClick;
-            });
-        }
-    })
-
-    ferrament.addEventListener("click", function(params) {
-        if(shuffleEmojis = ferramentas){
-            ferramentas.sort(() => Math.random() > 0.5 ? 2 : -1);
-
-            gameContainer.innerHTML ='';
-
-            shuffleEmojis.forEach(ferramentas => {
-                const box = document.createElement("div");
-                box.className = "item";
-                box.textContent = ferramentas;
-                gameContainer.appendChild(box);
-                box.onclick = handleClick;
-            });
-        }
-    })
+        fruit.addEventListener("click",function(){
+            handleOptionClick(frutas);
+        });
+        animals.addEventListener("click",function(){
+            handleOptionClick(animais);
+        });
+        ferrament.addEventListener("click",function(){
+        handleOptionClick(ferramentas);
+        });
 
         if (shuffleEmojis = emojis) {
             emojis.sort(() => Math.random() > 0.5 ? 2 : -1);        
