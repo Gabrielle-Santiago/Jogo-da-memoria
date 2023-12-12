@@ -141,7 +141,7 @@ let openCards = [];
             openCards = [];
             
             if (document.querySelectorAll(".boxMatch").length === emojis.length) {
-                alert("Você venceu!")
+                alert("Parabéns! Seu esforço e habilidade foram recompensados. Celebre essa conquista merecida!!!");
             }
         }
 
