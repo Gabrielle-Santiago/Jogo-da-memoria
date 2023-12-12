@@ -1,0 +1,124 @@
+.icon{
+    display: flex;
+    font-size: 30px;
+    margin: left;
+    cursor: pointer;
+}
+
+.options-menu {
+    font-size: 16px;
+    font-weight: 600;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+  }
+  
+.options-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+.options-menu li {
+    cursor: pointer;
+    padding: 5px;
+}
+
+.list{
+    display: inline-flex;
+    position: initial;
+    color: #fff;
+    font-size: 18px;
+    background-color: transparent;
+}
+
+.opcao:hover{
+  color: #ea75d9;
+  text-shadow: 5px 5px 2px #a70f0f;
+}
+
+/* Estilização do botão */
+
+.glow-on-hover {
+  padding: 15px 20px;
+  width: 100%;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+/* Estlização do título */
+
+.texto-c {
+  font-size:36px;
+  letter-spacing: 8px;
+  -webkit-background-clip: text;
+  color: white;
+  -webkit-text-fill-color: transparent;
+  background-color:#FFF;
+  background-image: -webkit-gradient(linear,left top,right top,from(#ea8711), to(#d96363));
+  background-image: -webkit-linear-gradient(left,#ea8711,#d96363,#73a6df,#9085fb,#52ca79);
+  background-image: -moz-linear-gradient(left,#ea8711,#d96363,#73a6df,#9085fb,#52ca79);
+  background-image: -ms-linear-gradient(left,#ea8711,#d96363,#73a6df,#9085fb,#52ca79);
+  background-image: -o-linear-gradient(left,#ea8711,#d96363,#73a6df,#9085fb,#52ca79);
+}

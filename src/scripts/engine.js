@@ -69,12 +69,33 @@ let openCards = [];
 
         fruit.addEventListener("click",function(){
             handleOptionClick(frutas);
+
+            const item = document.querySelectorAll('.item');
+            
+            item.forEach(item => {
+                item.classList.add('Fruclicked');
+            });
+
         });
         animals.addEventListener("click",function(){
             handleOptionClick(animais);
+
+            const item = document.querySelectorAll('.item');
+            
+            item.forEach(item => {
+                item.classList.add('Aniclicked');
+            });
+
         });
         ferrament.addEventListener("click",function(){
-        handleOptionClick(ferramentas);
+            handleOptionClick(ferramentas);
+
+            const item = document.querySelectorAll('.item');
+            
+            item.forEach(item => {
+                item.classList.add('Ferclicked');
+            });
+
         });
 
         if (shuffleEmojis = emojis) {
