@@ -42,34 +42,10 @@ body{
     justify-content: center;
     align-items: center;
     gap: 15px;
-    background-color: #047575e1;
+    background-color: #022828ad;
     padding: 20px;
     max-width: 100%;
     box-sizing: border-box;
-}
-
-h2{
-    font-size: 3em;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.reset{
-    padding: 15px 20px;
-    width: 100%;
-    color: #000;
-    background-color: #d2d3d5;
-    font-size: 1.5em;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-.reset:focus{
-    background-color: #050553;
-    color: #fff;
 }
 
 .game{
@@ -114,6 +90,7 @@ h2{
     transform: rotateY(0deg);
     backface-visibility: hidden;
 }
+
 .item:hover{
     background-color: #f6cdee;
 }
@@ -123,4 +100,21 @@ h2{
 
 .boxOpen::after, .boxMatch::after{
     transform: rotateY(180deg);
+}
+
+/* Mudança das cores das cartas */
+
+.item.Fruclicked::after{
+    background: rgb(20,222,245);
+    background: linear-gradient(90deg, rgba(20,222,245,1) 0%, rgba(69,216,120,1) 100%);
+}
+
+.item.Aniclicked::after{
+    background: rgb(20,163,245);
+    background: linear-gradient(90deg, rgba(20,163,245,1) 0%, rgba(216,69,176,1) 86%);
+}
+
+.item.Ferclicked::after{
+    background: rgb(20,245,168);
+    background: linear-gradient(90deg, rgba(20,245,168,1) 4%, rgba(171,69,216,1) 92%);
 }
